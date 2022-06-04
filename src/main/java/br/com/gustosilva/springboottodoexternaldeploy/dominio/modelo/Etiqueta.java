@@ -13,13 +13,13 @@ import lombok.NoArgsConstructor;
 @Table(name = "tb_etiqueta")
 @Getter
 @NoArgsConstructor
-@AllArgsConstructor
 public class Etiqueta {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String nome;
 
+    public Etiqueta(String nome) {
+        this.nome = nome;
+    }
 }
